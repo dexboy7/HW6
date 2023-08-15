@@ -75,8 +75,8 @@ window.onload = () => {
 
   let input = document.querySelector("#search");
 
-  let searchButton = document.getElementById('search-button');
-  searchButton.onclick = function() {
+  let searchButton = document.getElementById("search-button");
+  searchButton.onclick = function () {
     let value = input.value.trim().toUpperCase();
     let list = document.querySelectorAll(".items .card");
     if (value) {
@@ -103,7 +103,7 @@ function addCartPrice(price) {
 
 function renderPrice(price) {
   let pricetext = document.querySelector("#price");
-  let orderSum = document.querySelector("#order-sum")
+  let orderSum = document.querySelector("#order-sum");
   pricetext.textContent = `${price}.00$`;
   orderSum.textContent = `${price}.00$`;
 }
@@ -114,24 +114,19 @@ function removeCartPrice(price) {
 
 let cartItems = {};
 function addItemToCart(item) {
-
   addCartPrice(item.price);
-    let id = item.id;
-    if (cartItems[id] != undefined) ++cartItems[id];
-    else cartItems[id] = 1;
+  let id = item.id;
+  if (cartItems[id] != undefined) ++cartItems[id];
+  else cartItems[id] = 1;
 
   fillPopup(cartItems);
 }
 function removeItemFromCart(item, removeAll = false) {
   let id = item.id;
-  if (removeAll)
-  {
-
+  if (removeAll) {
     delete cartItems[id];
-  }
-  else{
-    if(cartItems[id] > 1)
-    --cartItems[id];
+  } else {
+    if (cartItems[id] > 1) --cartItems[id];
   }
   fillPopup(cartItems);
 }
@@ -140,19 +135,15 @@ function fillPopup(cartItems) {
   const cart = document.querySelector("#popup-body-items");
   cart.replaceChildren();
   const emptyOrder = document.querySelector("#empty-order");
-  const orderButton = document.querySelector("#order")
+  const orderButton = document.querySelector("#order");
 
   if (Object.keys(cartItems).length === 0) {
-    
     emptyOrder.classList.remove("hide");
- 
+
     orderButton.style.color = "background: dodgerblue";
-    
-    
   } else {
-    orderButton.removeAttribute('disabled', '', );
+    orderButton.removeAttribute("disabled", "");
     emptyOrder.classList.add("hide");
-    
   }
 
   for (const id in cartItems) {
@@ -171,7 +162,7 @@ function fillPopup(cartItems) {
     addAmountbutton.classList.add("add-amount-button");
     addAmountbutton.textContent = "+";
     addAmountbutton.onclick = () => {
-      addItemToCart(item)
+      addItemToCart(item);
     };
 
     const amount = document.createElement("div");
@@ -195,7 +186,14 @@ function fillPopup(cartItems) {
     const card = document.createElement("div");
     card.classList.add("item");
 
-    card.append(image, title, addAmountbutton, amount, removeAmountbutton, removeButton);
+    card.append(
+      image,
+      title,
+      addAmountbutton,
+      amount,
+      removeAmountbutton,
+      removeButton
+    );
 
     cart.append(card);
   }
