@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h5>Our Shop</h5>
+    <div class="head" id="head">
+      <button class="cart-button" id="cart"> Your cart - <span id="price"> 00.00$ </span></button>
+      <input class="search" placeholder="search" id="search">
+      <button id= 'search-button'class="search-button">Поиск</button>
+    </div>
+  </header>
+
+  <div class="body-container">
+    <h1>Our Products</h1>
+    <div id="items" class="items">
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="popup-container">
+      <div class="popup-header">
+        <h2>Your Order</h2>
+        <span class="close">&times;</span>
+        
+      </div>
+      
+      <div class="popup-body" id="popup-body">
+        <h3 id="empty-order">Your order is empty</h3>
+        <div id="popup-body-items" class="popup-body-items">
+        </div>
+      </div>
+      <div class="popup-footer">
+        <h3 >Your order: <span id="order-sum"> </span></h3>
+        <button class="order-button" id="order">Order</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

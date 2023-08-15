@@ -1,0 +1,191 @@
+header {
+  background-color: lightgray;
+  display: flex;
+  align-items: baseline;
+  padding: 5px;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+header>h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.search-button {
+  border-radius: 5px;
+  border-color: #10bd00;
+  background-color: white;
+  color: #10bd00;
+}
+
+.search {
+  border-radius: 5px;
+}
+
+.cart-button {
+    background-color: #10bd00;
+    border-color: #10bd00;
+    border-radius: 5px;
+    color: white;
+  }
+
+.body-container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+}
+
+@media (max-width: 768px) {
+    .items {
+        grid-template-columns: auto;
+    }
+}
+
+.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 0.5em;
+}
+
+.card-body {
+    height: 100%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.card-image {
+    object-fit: cover;
+    aspect-ratio: 2 / 1;
+}
+
+.card-button {
+    width: 100%;
+    background: dodgerblue;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    color: white;
+}
+
+.price-and-rating-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid darkgray;
+    background: lightgrey;
+    padding: 0.5em;
+    margin: 1em 0;
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 47px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.close{
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.close:hover,
+.close:focus{
+    color:  black;
+    text-decoration: none;
+}
+
+.popup-header{
+    display: flex;
+    padding: 2px 16px;
+}
+
+.popup-container{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+}
+
+.hide{
+    display: none;
+}
+
+.item{
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-amount-button{
+    background-color: #aaa;
+}
+
+.remove-amount-button{
+    background-color: #aaa;
+}
+
+.remove-button{
+    background-color: #ff0000;
+    border-color: #ff0000;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+}
+
+.item-amount{
+    background: dodgerblue;
+    border: none;
+    padding: 10px;
+    border-radius: 0.5em;
+    width: max-content  ;
+    color: white;
+    height: 30px;
+}
+
+.item-image{
+    width: 100px;
+}
+
+.order-button:disabled{
+    width: 100%;
+background: dodgerblue;
+border: none;
+padding: 1em;
+border-radius: 0.5em;
+color: white;
+}
+
+.remove-amount-button{
+    height: 30px;
+}
+
+.add-amount-button{
+    height: 30px;
+}
